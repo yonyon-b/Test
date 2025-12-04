@@ -27,6 +27,13 @@
             android:layout_gravity="center"
             android:text="אפליקציה זו באה למטרה לעזור לתלמידים, המאבדים פריטים בבית  הספר.באפליקציה זו תלמידים יעלו פוסטים, שיוכילו מציאה של פריט אבוד בבית הספר, או בקשה לפריט שנאבד. \nהאפליקציה כוללת אפשרויות סינון בין פוסטים, כך שתלמיד שאיבד או מצא פריט, יוכל לחפש אותו בין מספר פוסטים."
             android:textSize="20dp"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="200dp"
+            android:text="Register"
+            android:onClick="register"/>
 
     </LinearLayout>
 

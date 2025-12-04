@@ -3,12 +3,17 @@ package com.alma.classesproj.model;
 import java.util.ArrayList;
 
 public class ItemCart {
+
+    String id;
     ArrayList<Item> arr;
-    public ItemCart(ArrayList<Item> arr) {
+    public ItemCart(String id, ArrayList<Item> arr) {
+        this.id = id;
         this.arr = arr;
     }
     public ItemCart() {
     }
+    public String getId() { return id; }
+    public void setId(String id) {this.id = id;}
     public ArrayList<Item> getArr() {
         return arr;
     }
