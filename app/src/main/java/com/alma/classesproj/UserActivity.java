@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-import com.alma.classesproj.services.DatabaseService;
+
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -42,12 +42,14 @@ public class UserActivity extends AppCompatActivity {
         userDisplay = findViewById(R.id.tvUser);
         mAuth = FirebaseAuth.getInstance();
 
+
+
         reference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot snapshot) {
                 if (snapshot.exists()) {
                     String name = snapshot.child("fName").getValue(String.class);
-                    userDisplay.setText("Hello " + name);
+                    userDisplay.setText(name + "שלום ");
                     Log.d("USER_NAME", "Name: " + name);
                 }
             }
