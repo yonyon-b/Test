@@ -5,19 +5,19 @@ public class Item {
     String name;
     boolean lost;
     String position;
-    String type;
     String date;
     String pic;
     String details;
-    public Item(String name, String id, boolean lost, String position, String type, String date, String pic, String details) {
+    String userId;
+    public Item(String name, String id, boolean lost, String position, String date, String pic, String details, String userId) {
         this.name = name;
         this.id = id;
         this.lost = lost;
         this.position = position;
-        this.type = type;
         this.date = date;
         this.pic = pic;
         this.details = details;
+        this.userId = userId;
     }
     public Item() {
     }
@@ -53,14 +53,6 @@ public class Item {
         this.position = position;
     }
 
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
     public String getDate() {
         return date;
     }
@@ -85,6 +77,10 @@ public class Item {
         this.details = details;
     }
 
+    public String getUserId(){return userId; }
+
+    public void setUserId (String userId){ this.userId = userId; }
+
     @Override
     public String toString() {
         return "Item{" +
@@ -92,10 +88,10 @@ public class Item {
                 ", name='" + name + '\'' +
                 ", lost=" + lost +
                 ", position='" + position + '\'' +
-                ", type='" + type + '\'' +
                 ", date='" + date + '\'' +
                 ", pic='" + pic + '\'' +
                 ", details='" + details + '\'' +
+                ", userId='" + userId + '\'' +
                 '}';
     }
 }

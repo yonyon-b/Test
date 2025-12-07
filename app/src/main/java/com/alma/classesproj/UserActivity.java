@@ -1,7 +1,10 @@
 package com.alma.classesproj;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -18,11 +21,12 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class UserActivity extends AppCompatActivity {
+public class UserActivity extends AppCompatActivity implements View.OnClickListener {
     private FirebaseUser user;
     private String uid;
     private TextView userDisplay;
     private FirebaseAuth mAuth;
+    Button btnItemCreate;
 
 
     @Override
@@ -35,6 +39,8 @@ public class UserActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        btnItemCreate = findViewById(R.id.btnItemCreate);
+        btnItemCreate.setOnClickListener(this);
         user = FirebaseAuth.getInstance().getCurrentUser();
         uid = user.getUid();
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("users").child(uid);
@@ -59,5 +65,13 @@ public class UserActivity extends AppCompatActivity {
                 Log.e("DB_ERROR", error.getMessage());
             }
         });
+    }
+
+    @Override
+    public void onClick(View view) {
+        if (view.getId() == btnItemCreate.getId()){
+            Intent i = new Intent(this, AddItem.class);
+            startActivity(i);
+        }
     }
 }

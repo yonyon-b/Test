@@ -45,13 +45,13 @@
             android:orientation="horizontal">
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical">
                 <EditText
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:hint="Item Location"
-                    android:layout_margin="30dp"
+                    android:layout_marginStart="30dp"
                     android:id="@+id/etItemLocation"
                     />
                 <Button
@@ -59,7 +59,7 @@
                     android:layout_height="wrap_content"
                     android:text="Select Image"
                     android:layout_gravity="center"
-                    android:layout_margin="30dp"
+                    android:layout_marginTop="20dp"
                     android:id="@+id/btnSelectImg"
                     />
                 <Button
@@ -67,28 +67,74 @@
                     android:layout_height="wrap_content"
                     android:text="Camera"
                     android:layout_gravity="center"
-                    android:layout_margin="30dp"
+                    android:layout_marginTop="20dp"
                     android:id="@+id/btnCamera"/>
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:scaleType="centerCrop"
+                    android:adjustViewBounds="true"
+                    android:id="@+id/imgItem"
+                    />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:orientation="vertical">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Select Date Found/Lost"
-                    android:textSize="15dp"
+                    android:textSize="20dp"
                     android:textStyle="bold"
                     android:layout_gravity="center"
                     />
-                <DatePicker
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <NumberPicker
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:id="@+id/npItemDay"
+                        />
+                    <NumberPicker
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:id="@+id/npItemMonth"
+                        />
+                    <NumberPicker
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:id="@+id/npItemYear"
+                        />
+                </LinearLayout>
+
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:datePickerMode="spinner"
-                    android:layout_margin="30dp"
+                    android:text="Item Description: "
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="10dp"
+                    android:layout_gravity="start"
                     />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Description"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:id="@+id/etItemDesc"
+                    />
+
             </LinearLayout>
 
         </LinearLayout>
@@ -96,22 +142,14 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
-            <TextView
+            android:orientation="vertical">
+            <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Item Description: "
-                android:layout_marginStart="30dp"
-                android:layout_marginEnd="10dp"
+                android:text="Upload Item"
+                android:layout_marginTop="30dp"
                 android:layout_gravity="center"
-                />
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:hint="Description"
-                android:layout_marginEnd="30dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
+                android:id="@+id/btnItemSubmit"
                 />
         </LinearLayout>
 
