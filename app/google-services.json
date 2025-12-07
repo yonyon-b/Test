@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "334707589901",
+    "firebase_url": "https://test-16a2f-default-rtdb.firebaseio.com",
+    "project_id": "test-16a2f",
+    "storage_bucket": "test-16a2f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:334707589901:android:3200d6d29d0712333aa644",
+        "android_client_info": {
+          "package_name": "com.alma.classesproj"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTQJ1jFx5jUTC5TTRbMv8bnpkV75Yefw4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
