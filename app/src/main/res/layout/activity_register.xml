@@ -76,13 +76,6 @@
             android:layout_marginTop="50dp"
             android:text="Log In"
             android:id="@+id/btnToLogin" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:text="To User"
-            android:id="@+id/btnUser" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

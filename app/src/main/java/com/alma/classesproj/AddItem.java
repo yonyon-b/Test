@@ -78,9 +78,7 @@ public class AddItem extends AppCompatActivity implements View.OnClickListener {
             item.setName(itemName.getText().toString());
             item.setLost(itemType.getSelectedItem().toString().equals("Lost"));
             item.setPosition(itemLocation.getText().toString());
-
             item.setDate(day.getValue() + "/" + month.getValue() + "/" + year.getValue());
-
             item.setPic(ImageUtil.convertTo64Base(img));
             item.setDetails(itemDesc.getText().toString());
             item.setUserId(mAuth.getCurrentUser().getUid());

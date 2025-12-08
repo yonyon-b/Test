@@ -27,7 +27,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
     SharedPreferences sharedpreferences;
     EditText etFname, etLname, etMail, etPhone, etPassword;
     String fName, lName, email, phone, password;
-    Button btnSubmit, btnLogin, btnToUser;
+    Button btnSubmit, btnLogin;
     private DatabaseService databaseService;
     private FirebaseAuth mAuth;
 
@@ -42,10 +42,9 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
             return insets;
         });
 
-
-
         databaseService=DatabaseService.getInstance();
         mAuth = FirebaseAuth.getInstance();
+
         etFname = findViewById(R.id.etFname);
         etLname = findViewById(R.id.etLname);
         etMail = findViewById(R.id.etEmail);
@@ -53,11 +52,9 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
         etPassword = findViewById(R.id.etPassword);
         btnSubmit = findViewById(R.id.btnSubmit);
         btnLogin = findViewById(R.id.btnToLogin);
-        btnToUser = findViewById(R.id.btnUser);
 
         btnSubmit.setOnClickListener(this);
         btnLogin.setOnClickListener(this);
-        btnToUser.setOnClickListener(this);
 
         sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
     }
@@ -84,10 +81,6 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
         }
         else if (v.getId() == btnLogin.getId()){
             Intent i = new Intent(this, Login.class);
-            startActivity(i);
-        }
-        else{
-            Intent i = new Intent(this, UserActivity.class);
             startActivity(i);
         }
     }
